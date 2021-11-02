@@ -1,6 +1,6 @@
-import { SafeAreaView, ScrollView, useColorScheme } from "react-native";
-import { Colors, Header } from "react-native/Libraries/NewAppScreen";
-
+import * as React from 'react';
+import {SafeAreaView, ScrollView, useColorScheme} from 'react-native';
+import {Colors, Header} from 'react-native/Libraries/NewAppScreen';
 
 const LayOut = () => {
   const isDarkMode = useColorScheme() === 'dark';
@@ -8,7 +8,7 @@ const LayOut = () => {
   const backgroundStyle = {
     backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
   };
-  
+
   return (
     <SafeAreaView style={backgroundStyle}>
       <ScrollView
@@ -17,5 +17,7 @@ const LayOut = () => {
         <Header />
       </ScrollView>
     </SafeAreaView>
-  )
-}
+  );
+};
+
+export default LayOut;
